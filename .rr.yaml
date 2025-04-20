@@ -1,0 +1,22 @@
+version: "3"
+
+server:
+  command: "php artisan octane:roadrunner"
+
+grpc:
+  listen: "tcp://127.0.0.1:9001"
+  proto:
+    - "proto/helloworld.proto"
+
+http:
+  address: 0.0.0.0:8000  # Укажите адрес и порт, на котором будет слушать HTTP-сервер
+  http2:                  # Измените это на объект, даже если он пустой
+    enabled: true         # Включите поддержку HTTP/2
+
+# Опции для настройки worker'ов
+workers:
+  command: "php worker.php"  # Укажите команду для запуска worker'ов
+  relay: "pipes"              # Используйте pipes для передачи данных между сервером и worker'ами
+  pool:
+    num: 4                    # Количество worker'ов
+    max: 10                   # Максимальное количество worker'ов
