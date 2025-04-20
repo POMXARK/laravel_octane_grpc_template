@@ -37,6 +37,11 @@ protoc --plugin=protoc-gen-php-grpc --php_out=./generated --php-grpc_out=./gener
 https://docs.roadrunner.dev/docs/general/install
 https://docs.roadrunner.dev/docs/plugins/grpc
 
+laravel octane + Spiral RoadRunner GRPC
+```shell
+./rr serve
+```
+
 grpc roadrunner
 ```shell
 ./rr serve
