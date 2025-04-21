@@ -16,7 +16,8 @@
         "spiral/roadrunner": "^2024.3",
         "spiral/roadrunner-cli": "^2.7",
         "spiral/roadrunner-grpc": "^3.5",
-        "spiral/roadrunner-http": "^3.5"
+        "spiral/roadrunner-http": "^3.5",
+        "ext-grpc": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

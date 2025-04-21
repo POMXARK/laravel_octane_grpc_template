@@ -18,7 +18,7 @@ final class GreeterWithLaravel implements GreeterInterface
             $greeting = new Greeting();
             $greeting->name = $in->getName();
             $greeting->save();
-
+            print_r($greeting->name);
             $response = new HelloReply();
             $response->setMessage("Hello, " . $in->getName() . "!");
             return $response;

@@ -11,8 +11,10 @@ class CustomOctaneServiceProvider extends ArtisanServiceProvider
     public function register()
     {
         parent::register();
-        $this->commands([
-            'Grpc' => GrpcStartRoadRunnerCommand::class,
-        ]);
+        if (config('octane.grpc_server')) {
+            $this->commands([
+                'Grpc' => GrpcStartRoadRunnerCommand::class,
+            ]);
+        }
     }
 }

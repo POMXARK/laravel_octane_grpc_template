@@ -39,6 +39,8 @@ return [
     */
 
     'server' => env('OCTANE_SERVER', 'roadrunner'),
+    'grpc_server' => env('GRPC_SERVER', false),
+    'grpc_server_host' => env('GRPC_SERVER_HOST', 'localhost'),
 
     /*
     |--------------------------------------------------------------------------
